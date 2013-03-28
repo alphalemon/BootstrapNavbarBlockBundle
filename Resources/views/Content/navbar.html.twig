@@ -1,0 +1,20 @@
+{% extends "AlphaLemonCmsBundle:Editor:base_editor.html.twig" %}
+
+{% block body %}
+<div class="navbar navbar-fixed-top" {{ editor|raw }}>
+    <div class="navbar-inner">
+        {% set baseKey = parent.getId ~ "-brand" %}    
+        {{ renderIncludedBlock(baseKey, parent, 'Text', true, '<a class="brand brand-bootbus" href="#">Bootbusiness</a>') }}
+        <ul class="nav al-navbar-list">
+        {% if items|length > 0 %}
+        {% for key, item in items %}
+            {% set baseKey = parent.getId ~ "-" ~ key %}    
+            <li data-item="{{ key }}" data-key="{{ baseKey }}">{{ renderIncludedBlock(baseKey, parent, item.blockType, true) }}</li>
+        {% endfor %}
+        {% else %}
+            <li class="al-empty">Any link added</li>
+        {% endif %}
+        </ul>
+    </div>
+</div>
+{% endblock %}

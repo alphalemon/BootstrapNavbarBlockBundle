@@ -1,0 +1,5 @@
+BootstrapNavbarBlockBundle
+--------------------------
+
+Implements an AlphaLemon CMS app-block capable to manage a Twitter Bootstrap navbar 
+by a nice ajax powered inteface.

@@ -1,0 +1,8 @@
+{
+    "autoload": {
+        "psr-0": { "AlphaLemon\\Block\\BootstrapNavbarBlockBundle": ""
+        }
+    },
+    "target-dir" : "AlphaLemon/Block/BootstrapNavbarBlockBundle",
+    "minimum-stability": "dev"
+}

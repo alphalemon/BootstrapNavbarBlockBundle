@@ -9,7 +9,7 @@
         {% if items|length > 0 %}
         {% for key, item in items %}
             {% set baseKey = parent.getId ~ "-" ~ key %}    
-            <li data-item="{{ key }}" data-key="{{ baseKey }}">{{ renderIncludedBlock(baseKey, parent, item.blockType, true) }}</li>
+            <li data-item="{{ key }}" data-slot-name="{{ baseKey }}">{{ renderIncludedBlock(baseKey, parent, item.blockType, true) }}</li>
         {% endfor %}
         {% else %}
             <li class="al-empty">Any link added</li>

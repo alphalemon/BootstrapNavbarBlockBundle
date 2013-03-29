@@ -17,16 +17,11 @@ class AlBlockManagerBootstrapNavbarBlock extends AlBlockManagerContainer
     {
         $value = '
             {
-                "toolbar" : {
-                    "brand": "My awesome company"
+                "0": {
+                    "blockType" : "Link"
                 },
-                "links" : {
-                    "0": {
-                        "blockType" : "Link"
-                    },
-                    "1": {
-                        "blockType" : "Link"
-                    }
+                "1": {
+                    "blockType" : "Link"
                 }
             }';
             
@@ -39,7 +34,7 @@ class AlBlockManagerBootstrapNavbarBlock extends AlBlockManagerContainer
         
         return array('RenderView' => array(
             'view' => 'BootstrapNavbarBlockBundle:Content:navbar.html.twig',
-            'options' => array( 'items' => $items["links"], 'parent' => $this->alBlock),
+            'options' => array( 'items' => $items, 'parent' => $this->alBlock),
         ));
     }
     
@@ -49,16 +44,16 @@ class AlBlockManagerBootstrapNavbarBlock extends AlBlockManagerContainer
         $savedValues = AlBlockManagerJsonBlock::decodeJsonContent($this->alBlock);
         
         if ($data["operation"] == "add") {
-            $savedValues["links"][] = $data["value"];
+            $savedValues[] = $data["value"];
             $values = array("Content" => json_encode($savedValues));
         }
         
-        if ($data["operation"] == "remove") {//print_r($data);  $data["item"];
-            unset($savedValues["links"][$data["item"]]);
+        if ($data["operation"] == "remove") {
+            unset($savedValues[$data["item"]]);
             
             $blocksRepository = $this->container->get('alpha_lemon_cms.factory_repository');
             $repository = $blocksRepository->createRepository('Block');
-            $repository->deleteIncludedBlocks($data["key"]);
+            $repository->deleteIncludedBlocks($data["slotName"]);
             
             $values = array("Content" => json_encode($savedValues));
         }

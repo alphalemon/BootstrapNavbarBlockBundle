@@ -20,7 +20,7 @@
         </service>
         
         <service id="bootstrap_navbar_dropbown_block" class="%bootstrap_navbar_dropbown_block.block.class%">
-            <tag name="alphalemon_cms.blocks_factory.block" description="Navbar dropdown" type="BootstrapNavbarDropdownBlock" group="bootstrap,Twitter Bootstrap" />
+            <tag name="alphalemon_cms.blocks_factory.block" description="Nav dropdown" type="BootstrapNavbarDropdownBlock" group="bootstrap,Twitter Bootstrap" />
             <argument type="service" id="service_container" />
         </service>
         

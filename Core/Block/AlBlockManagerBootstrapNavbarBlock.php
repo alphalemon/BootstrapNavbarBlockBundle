@@ -6,6 +6,7 @@
 namespace AlphaLemon\Block\BootstrapNavbarBlockBundle\Core\Block;
 
 use AlphaLemon\Block\MenuBundle\Core\Block\AlBlockManagerMenu;
+use AlphaLemon\AlphaLemonCmsBundle\Core\Content\Block\JsonBlock\AlBlockManagerJsonBlock;
 
 /**
  * Description of AlBlockManagerBootstrapNavbarBlock

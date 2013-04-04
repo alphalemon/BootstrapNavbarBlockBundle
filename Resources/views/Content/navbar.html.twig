@@ -3,13 +3,13 @@
 {% block body %}
 <div class="navbar navbar-fixed-top" {{ editor|raw }}>
     <div class="navbar-inner">
-        {% set baseKey = parent.getId ~ "-brand" %}    
-        {{ renderIncludedBlock(baseKey, parent, 'Text', true, '<a class="brand brand-bootbus" href="#">Bootbusiness</a>') }}
+        {% set baseKey = block_manager.get.getId ~ "-brand" %}    
+        {{ renderIncludedBlock(baseKey, block_manager, 'Text', true, '<a class="brand brand-bootbus" href="#">Bootbusiness</a>') }}
         <ul class="nav al-navbar-list">
         {% if items|length > 0 %}
         {% for key, item in items %}
             {% set baseKey = parent.getId ~ "-" ~ key %}    
-            <li data-item="{{ key }}" data-slot-name="{{ baseKey }}">{{ renderIncludedBlock(baseKey, parent, item.blockType, true) }}</li>
+            <li data-item="{{ key }}" data-slot-name="{{ baseKey }}">{{ renderIncludedBlock(baseKey, block_manager, item.blockType, true) }}</li>
         {% endfor %}
         {% else %}
             <li class="al-empty">Any link added</li>

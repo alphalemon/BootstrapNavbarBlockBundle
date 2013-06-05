@@ -1,6 +1,18 @@
 <?php
-/**
- * An AlphaLemonCms Block
+/*
+ * This file is part of the BootstrapNavbarBlockBundle and it is distributed
+ * under the MIT LICENSE. To use this application you must leave intact this copyright 
+ * notice.
+ *
+ * Copyright (c) AlphaLemon <webmaster@alphalemon.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * For extra documentation and help please visit http://www.alphalemon.com
+ * 
+ * @license    MIT LICENSE
+ * 
  */
 
 namespace AlphaLemon\Block\BootstrapNavbarBlockBundle\Core\Block;
@@ -36,7 +48,9 @@ class AlBlockManagerBootstrapNavbarBlock extends AlBlockManagerMenu
         
         return array('RenderView' => array(
             'view' => 'BootstrapNavbarBlockBundle:Content:navbar.html.twig',
-            'options' => array( 'items' => $items, 'parent' => $this->alBlock),
+            'options' => array(
+                'items' => $items, 
+            ),
         ));
     }
 }

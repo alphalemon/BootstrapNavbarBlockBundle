@@ -8,7 +8,7 @@
         <ul class="nav al-navbar-list">
         {% if items|length > 0 %}
         {% for key, item in items %}
-            {% set baseKey = parent.getId ~ "-" ~ key %}    
+            {% set baseKey = block_manager.get.getId ~ "-" ~ key %}    
             <li{% if block_manager.getEditorDisabled == false %} data-item="{{ key }}" data-slot-name="{{ baseKey }}" {% endif %}>{{ renderIncludedBlock(baseKey, block_manager, item.blockType, true, '', 'data-hide-blocks-menu=true') }}</li>
         {% endfor %}
         {% else %}

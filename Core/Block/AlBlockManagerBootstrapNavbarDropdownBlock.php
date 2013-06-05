@@ -1,6 +1,18 @@
 <?php
-/**
- * An AlphaLemonCms Block
+/*
+ * This file is part of the BootstrapNavbarBlockBundle and it is distributed
+ * under the MIT LICENSE. To use this application you must leave intact this copyright 
+ * notice.
+ *
+ * Copyright (c) AlphaLemon <webmaster@alphalemon.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * For extra documentation and help please visit http://www.alphalemon.com
+ * 
+ * @license    MIT LICENSE
+ * 
  */
 
 namespace AlphaLemon\Block\BootstrapNavbarBlockBundle\Core\Block;
@@ -18,41 +30,40 @@ class AlBlockManagerBootstrapNavbarDropdownBlock extends AlBlockManagerBootstrap
     public function getDefaultValue()
     {
         $value = '
-                {
-                    "0": {
-                        "button_text": "Dropdown Button 1",
-                        "button_type": "",
-                        "button_attribute": "",
-                        "button_dropup" : "none",
-                        "items": [
-                            {
-                                "data" : "Item 1", 
-                                "metadata" : {  
-                                    "type": "link",
-                                    "href": "#",
-                                    "attributes": {}
-                                }
-                            },
-                            { 
-                                "data" : "Item 2", 
-                                "metadata" : {  
-                                    "type": "link",
-                                    "href": "#",
-                                    "attributes": {}
-                                }
-                            },
-                            { 
-                                "data" : "Item 3", 
-                                "metadata" : {  
-                                    "type": "link",
-                                    "href": "#",
-                                    "attributes": {}
-                                }
+            {
+                "0": {
+                    "button_text": "Dropdown Button 1",
+                    "button_type": "",
+                    "button_attribute": "",
+                    "button_dropup" : "none",
+                    "items": [
+                        {
+                            "data" : "Item 1", 
+                            "metadata" : {  
+                                "type": "link",
+                                "href": "#",
+                                "attributes": {}
                             }
-                        ]
-                    }
+                        },
+                        { 
+                            "data" : "Item 2", 
+                            "metadata" : {  
+                                "type": "link",
+                                "href": "#",
+                                "attributes": {}
+                            }
+                        },
+                        { 
+                            "data" : "Item 3", 
+                            "metadata" : {  
+                                "type": "link",
+                                "href": "#",
+                                "attributes": {}
+                            }
+                        }
+                    ]
                 }
-            ';
+            }';
         
         return array('Content' => $value);
     }

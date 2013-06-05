@@ -17,6 +17,7 @@
     ],
     "require-dev": {
         "alphalemon/alphalemon-cms-bundle": "dev-master",
+        "alphalemon/app-bootstrap-button-bundle": "dev-master",
         "willdurand/propel-typehintable-behavior": "dev-master"
     },
     "autoload": {

@@ -21,7 +21,7 @@ use AlphaLemon\Block\MenuBundle\Core\Block\AlBlockManagerMenu;
 use AlphaLemon\AlphaLemonCmsBundle\Core\Content\Block\JsonBlock\AlBlockManagerJsonBlock;
 
 /**
- * Description of AlBlockManagerBootstrapNavbarBlock
+ * Defines the Block Manager to handle a Bootstrap Navbar
  */
 class AlBlockManagerBootstrapNavbarBlock extends AlBlockManagerMenu
 {

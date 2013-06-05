@@ -20,6 +20,11 @@ namespace AlphaLemon\Block\BootstrapNavbarBlockBundle\Core\Form;
 use AlphaLemon\AlphaLemonCmsBundle\Core\Form\JsonBlock\JsonBlockType;
 use Symfony\Component\Form\FormBuilderInterface;
 
+/**
+ * Defines the form to edit a navbar dropbown block
+ *
+ * @author AlphaLemon <webmaster@alphalemon.com>
+ */
 class AlNavbarDropdownType extends JsonBlockType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)

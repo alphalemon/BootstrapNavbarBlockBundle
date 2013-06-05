@@ -21,7 +21,7 @@ use AlphaLemon\Block\BootstrapButtonBlockBundle\Core\Block\AlBlockManagerBootstr
 use AlphaLemon\AlphaLemonCmsBundle\Core\Content\Block\JsonBlock\AlBlockManagerJsonBlock;
 
 /**
- * Description of AlBlockManagerBootstrapNavbarDropdownBlock
+ * Defines the Block Manager to handle a Bootstrap navbar dropdown button
  */
 class AlBlockManagerBootstrapNavbarDropdownBlock extends AlBlockManagerBootstrapDropdownButtonBlock
 {

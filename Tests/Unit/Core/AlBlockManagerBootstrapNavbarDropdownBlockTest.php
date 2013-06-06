@@ -21,7 +21,7 @@ use AlphaLemon\AlphaLemonCmsBundle\Tests\Unit\Core\Content\Block\Base\AlBlockMan
 use AlphaLemon\Block\BootstrapNavbarBlockBundle\Core\Block\AlBlockManagerBootstrapNavbarDropdownBlock;
 
 /**
- * AlBlockManagerBootstrapThumbnailBlockTest
+ * AlBlockManagerBootstrapNavbarDropdownBlockTest
  *
  * @author AlphaLemon <webmaster@alphalemon.com>
  */

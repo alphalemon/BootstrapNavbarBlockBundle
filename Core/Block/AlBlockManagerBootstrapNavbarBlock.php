@@ -21,12 +21,17 @@ use AlphaLemon\Block\MenuBundle\Core\Block\AlBlockManagerMenu;
 use AlphaLemon\AlphaLemonCmsBundle\Core\Content\Block\JsonBlock\AlBlockManagerJsonBlock;
 
 /**
- * Defines the Block Manager to handle a Bootstrap Navbar
+ * Defines the Block Manager to handle the Bootstrap Navbar
+ *
+ * @author AlphaLemon <webmaster@alphalemon.com>
  */
 class AlBlockManagerBootstrapNavbarBlock extends AlBlockManagerMenu
 {
     protected $blocksTemplate = 'BootstrapNavbarBlockBundle:Content:navbar.html.twig';    
     
+    /**
+     * {@inheritdoc}
+     */
     public function getDefaultValue()
     {
         $value = '
@@ -42,6 +47,9 @@ class AlBlockManagerBootstrapNavbarBlock extends AlBlockManagerMenu
         return array('Content' => $value);
     }
     
+    /**
+     * {@inheritdoc}
+     */
     protected function renderHtml()
     {
         $items = AlBlockManagerJsonBlock::decodeJsonContent($this->alBlock->getContent());

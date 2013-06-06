@@ -27,6 +27,9 @@ use Symfony\Component\Form\FormBuilderInterface;
  */
 class AlNavbarDropdownType extends JsonBlockType
 {
+    /**
+     * {@inheritdoc}
+     */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         parent::buildForm($builder, $options);

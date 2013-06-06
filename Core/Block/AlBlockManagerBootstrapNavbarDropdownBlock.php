@@ -22,11 +22,16 @@ use AlphaLemon\AlphaLemonCmsBundle\Core\Content\Block\JsonBlock\AlBlockManagerJs
 
 /**
  * Defines the Block Manager to handle a Bootstrap navbar dropdown button
+ *
+ * @author AlphaLemon <webmaster@alphalemon.com>
  */
 class AlBlockManagerBootstrapNavbarDropdownBlock extends AlBlockManagerBootstrapDropdownButtonBlock
 {
     protected $blockTemplate = 'BootstrapNavbarBlockBundle:Dropdown:navbar_dropdown_button.html.twig';  
     
+    /**
+     * {@inheritdoc}
+     */
     public function getDefaultValue()
     {
         $value = '
@@ -68,6 +73,9 @@ class AlBlockManagerBootstrapNavbarDropdownBlock extends AlBlockManagerBootstrap
         return array('Content' => $value);
     }
     
+    /**
+     * {@inheritdoc}
+     */
     public function editorParameters()
     {
         $items = AlBlockManagerJsonBlock::decodeJsonContent($this->alBlock->getContent());

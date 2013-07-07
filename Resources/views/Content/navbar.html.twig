@@ -9,7 +9,11 @@
         {% if items|length > 0 %}
         {% for key, item in items %}
             {% set baseKey = block_manager.get.getId ~ "-" ~ key %}    
-            <li{% if block_manager.getEditorDisabled == false %} data-item="{{ key }}" data-slot-name="{{ baseKey }}" {% endif %}>{{ renderIncludedBlock(baseKey, block_manager, item.blockType, true, '', 'data-hide-blocks-menu=true') }}</li>
+            {% if item.blockType != 'BootstrapNavbarDropdownBlock' %}
+                <li {% if block_manager.getEditorDisabled == false %} data-item="{{ key }}" data-slot-name="{{ baseKey }}" {% endif %}>{{ renderIncludedBlock(baseKey, block_manager, item.blockType, true, '', 'data-hide-blocks-menu=true') }}</li>
+            {% else %}
+                {{ renderIncludedBlock(baseKey, block_manager, item.blockType, true, '', 'data-hide-blocks-menu=true data-item=' ~ key) }}    
+            {% endif %}  
         {% endfor %}
         {% else %}
             <li class="al-empty">Any link added</li>

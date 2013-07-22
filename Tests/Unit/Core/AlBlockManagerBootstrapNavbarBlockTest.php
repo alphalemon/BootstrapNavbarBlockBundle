@@ -92,4 +92,19 @@ class AlBlockManagerBootstrapNavbarBlockTest extends AlBlockManagerContainerBase
 
         return $block;
     }
+    
+    protected function initContainer()
+    {
+        parent::initContainer();
+        
+        $repository = $this->getMock('AlphaLemon\AlphaLemonCmsBundle\Core\Repository\Factory\AlFactoryRepositoryInterface');
+        $repository->expects($this->once())
+              ->method('createRepository')
+              ->with('Block')
+        ;
+        
+        $this->container->expects($this->at(2))
+                      ->method('get')
+                      ->will($this->returnValue($repository));
+    }
 }
